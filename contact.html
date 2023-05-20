@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="./sass/vendors/bootstrap.min.css" />
     <link
@@ -24,9 +24,199 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/contact.min.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./css/contact.min.css" />
+  </head>
+  <body>
+    <div id="loading">
+      <div class="loadingio-spinner-spinner-meuk2dw5igb">
+        <div class="ldio-st50plrjn0l">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <button id="backtop">
+      <a href="#"><img src="./images/home/back.svg" alt="" /></a>
+    </button>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary red-bg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img src="./images/home/logo.svg" alt=""
+        /></a>
+        <button
+          class="navbar-toggler text-white border-white"
+          type="button "
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon text-white"></span>
+        </button>
+        <div
+          class="offcanvas w-75 red-bg container offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header text-white">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img src="./assits/images/logo.svg" alt="" />
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item mx-2">
+                <a class="nav-link active" href="./menu.html">Menu</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="./news.html">News</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="./about.html">About Us</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a
+                  class="btn btn-outline-danger border-white rounded-pill px-5 py-2"
+                  href="contact.html"
+                  >Log in</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+
+        <section id="map">
+            <div class="map__container container">
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+      <section id="email">
+        <div class="container-tree">
+          <div class="email__container border-0 text-center d-flex row">
+            <div class="email__container__head">
+              <h4 class="text-light">Newsletter</h4>
+              <h2 class="text-light p-3">Subscribe to Our Newsletter</h2>
+              <p class="text-light">And never miss latest Updates!</p>
+            </div>
+            <div class="email__container__foot">
+              <form
+                class="row align-items-center flex-wrap justify-content-center"
+              >
+                <div class="col-auto">
+                  <label for="inputPassword2" class="visually-hidden"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control bg-transparent rounded-start-pill text-white rounded-end-pill"
+                    id="inputPassword2"
+                    placeholder="Email Address"
+                  />
+                </div>
+                <div class="col-auto">
+                  <button
+                    type="submit"
+                    class="btn bg-transparent text-white border-light-subtle rounded-start-pill rounded-end-pill"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="footer">
+        <div class="footer__container container text-center row">
+          <div
+            class="footer__container__contact text-white texet-a-white text-center col-lg-4"
+          >
+            <h3>Contact Us</h3>
+            <address>
+              <a
+                class="text-white"
+                href=":дом 33, г. Ташкент, Arnasay ko'chasi, Tashkent, Узбекистан"
+                >9 W 53rd St, London, NY 10019, UK</a
+              >
+            </address>
+            <div>
+              <a class="text-white" href="tel:+1 212-344-1230"
+                >+1 212-344-1230</a
+              >
+            </div>
+            <div>
+              <a class="text-white" href="tel:+1 212-555-1230"
+                >+1 212-555-1230</a
+              >
+            </div>
+          </div>
+          <div class="footer__container__logo text-white col-lg-4">
+            <img src="./images/home/logo2.png" alt="" />
+            <p>
+              "The best way to find yourself is to lose yourself in the service
+              of others.”
+            </p>
+            <a href="#"><img src="./images/home/facebook.svg" alt="" /></a>
+            <a href="#"><img src="./images/home/twitter.svg" alt="" /></a>
+            <a href="#"><img src="./images/home/u_instagram.svg" alt="" /></a>
+          </div>
+          <div
+            class="footer__container__working text-center text-white col-lg-4"
+          >
+            <h3>Working Hours</h3>
+            <div>
+              <p>Monday-Friday:</p>
+              <p>08:00 am -12:00 am</p>
+            </div>
+            <div>
+              <p>Saturday-Sunday:</p>
+              <p>07:00am -11:00 pm</p>
+            </div>
+          </div>
+          <h5 class="text-light text-center">
+            2022 Pop online. All Rights reserved.
+          </h5>
+        </div>
+      </section>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./sass/vendors/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/abdulazizcreator/ap-tab/main.js"></script>
+  </body>
 </html>
