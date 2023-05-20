@@ -1,0 +1,21 @@
+@use "../utils/function" as func;
+@use "../utils/variables" as var;
+
+.container {
+  max-width: func.container(1920, 310, var.$mobilePadding);
+  padding-left: var.$mobilePadding + px;
+  padding-right: var.$mobilePadding + px;
+  margin: 0 auto;
+}
+.container-two {
+  max-width: func.container(1920, 237, var.$mobilePadding);
+  padding-left: var.$mobilePadding + px;
+  padding-right: var.$mobilePadding + px;
+  margin: 0 auto;
+}
+.container-tree {
+  max-width: func.container(1920, 257, var.$mobilePadding);
+  padding-left: var.$mobilePadding + px;
+  padding-right: var.$mobilePadding + px;
+  margin: 0 auto;
+}

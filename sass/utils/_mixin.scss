@@ -1,0 +1,54 @@
+@use "variables" as var;
+@use "../base/typography";
+
+@mixin title($weight, $size, $height) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  text-transform: uppercase;
+  font-family: "";
+}
+
+@mixin title-1 {
+  @include title(700, var.$h1, 64px);
+}
+
+@mixin title-2 {
+  @include title(500, var.$h2, 64px);
+}
+
+@mixin title-3 {
+  @include title(500, var.$h3, 50px);
+}
+
+@mixin title-4 {
+  @include title(500, var.$h4, 44px);
+}
+
+@mixin title-5 {
+  @include title(500, var.$h5, 28px);
+}
+
+@mixin title-6 {
+  @include title(400, var.$h6, 19px);
+}
+
+@mixin df($jc, $ai, $fd) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+}
+
+@mixin btn($padding: 10px 30px, $bgc: transparent, $brc: #ffffff) {
+  padding: $padding;
+  background: $bgc;
+  border: 1px solid $brc;
+  border-radius: 100px;
+  transition: 0.5s;
+  &:hover {
+    padding: $padding;
+    background-color: var.$primaryColor;
+    border: 1px solid $brc;
+  }
+}

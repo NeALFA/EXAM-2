@@ -1,0 +1,87 @@
+@use "../global";
+@use "../utils/variables" as var;
+@use "../utils/mixin" as mix;
+
+#dishes {
+  background-color: #f8f8f8;
+}
+.dishes__container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  h2 {
+    font-family: "Cera Round Pro";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 48px;
+    color: #bb2339;
+    padding-bottom: 40px;
+  }
+}
+#dishes {
+  .owl-carousel {
+    .owl-nav {
+      position: absolute;
+      top: -90px;
+      right: 10px;
+      span {
+        background-color: transparent;
+        border: 1px solid var.$borderColor;
+        border-radius: 6px;
+        padding: 10px 15px;
+        &:hover {
+          border: 1px solid var.$primaryColor;
+          i {
+            width: 55px;
+          }
+        }
+      }
+      @media (max-width: 500px) {
+        top: 110%;
+        right: 30%;
+      }
+    }
+  }
+}
+
+.component__dishes {
+  @include mix.df(center, center, column);
+  max-width: 310px;
+  padding: 20px 20px 25px 20px;
+  background: var.$whiteColor;
+  border-radius: 14px;
+  p {
+    width: 270px;
+    margin-top: 10px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: var.$blackColor;
+    padding-bottom: 20px;
+  }
+  .star {
+    max-width: 108px;
+    margin-bottom: 10px;
+  }
+  a {
+    margin-top: 10px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: var.$primaryColor;
+  }
+  @media (max-width:600px) {
+    max-width: 450px !important;
+  }
+}
+.component__dishes {
+  background: #ffffff;
+  border: 1px solid rgba(36, 36, 36, 0.1);
+  border-radius: 14px;
+}

@@ -1,0 +1,415 @@
+@use "../global";
+@use "../components/component-dishes";
+@use "../components/component-gallery";
+@use "../utils/variables" as var;
+@use "../utils/mixin" as mix;
+
+#header {
+  background-color: var.$primaryColor;
+}
+#customer {
+  background-color: #f4f4f4;
+}
+#gallery {
+  background-color: #f4f4f4;
+}
+.header__container {
+  @include mix.df(center, center, row);
+  overflow: hidden;
+  gap: 8px;
+  .header__container__left {
+    padding-bottom: 308px;
+    h4 {
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 130%;
+      letter-spacing: 0.04em;
+      text-transform: capitalize;
+      color: var.$whiteColor;
+    }
+    h1 {
+      padding-top: 25px;
+      padding-bottom: 20px;
+      max-width: 555px;
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 90px;
+      line-height: 130%;
+      letter-spacing: 0.04em;
+      text-transform: capitalize;
+      color: var.$whiteColor;
+    }
+    p {
+      max-width: 453px;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 175%;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+      opacity: 0.7;
+      padding-bottom: 38px;
+    }
+    button {
+      @include mix.btn;
+      a {
+        font-family: "Cera Round Pro";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.04em;
+        color: var.$whiteColor;
+      }
+    }
+  }
+  .header__container__right {
+    margin-right: -178px;
+  }
+  @media (max-width: 1250px) {
+    img {
+      width: 90%;
+    }
+  }
+  @media (max-width: 1150px) {
+    flex-wrap: wrap;
+    .header__container__left {
+      text-align: center;
+      padding-bottom: 100px;
+    }
+  }
+  @media (max-width: 600px) {
+    .header__container__left {
+      @include mix.df(center, center, column);
+      h1 {
+        font-size: 50px;
+      }
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.ap-tab__container {
+  padding-top: 120px;
+  width: 100%;
+  @include mix.df(center, center, column);
+  gap: 34px;
+  h2 {
+    @include mix.title-2;
+    font-family: "Cera Round Pro";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    color: var.$primaryColor;
+  }
+  .ap-tab-content.active-tab {
+    display: grid !important;
+    grid-row-gap: 30px;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 1450px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .ap-tab-list {
+    @include mix.df(center, center, row);
+    gap: 10px;
+    @media (max-width: 1450px) {
+      text-align: center;
+      display: grid !important;
+      grid-row-gap: 30px;
+      grid-column-gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .ap-tab-item {
+      @include mix.btn;
+      border: 3px solid var.$primaryColor;
+      border-radius: 100px;
+      a {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        color: var.$blackColor;
+      }
+      &:hover {
+        @include mix.btn;
+        border: 3px solid var.$primaryColor;
+        border-radius: 100px;
+        a {
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 175%;
+          letter-spacing: 0.05em;
+          text-transform: capitalize;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.customer__container {
+  padding-top: 100px;
+  margin-top: 120px;
+  .customer__container__head {
+    @include mix.df(center, center, column);
+    h4 {
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 130%;
+      letter-spacing: 0.04em;
+      color: var.$blackColor;
+    }
+    h2 {
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 130%;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      font-feature-settings: "tnum" on, "lnum" on;
+      color: var.$blackColor;
+    }
+  }
+  .customer__container__footer {
+    .owl-carousel {
+      .owl-nav {
+        padding-bottom: 90px;
+        span {
+          background-color: transparent;
+          border: 1px solid var.$borderColor;
+          border-radius: 6px;
+          padding: 10px 15px;
+          &:hover {
+            border: 1px solid var.$primaryColor;
+            i {
+              width: 55px;
+            }
+          }
+        }
+      }
+    }
+    .customer__card {
+      max-width: 410px;
+      background: #ffffff;
+      border: 1px solid var.$borderColorTwo;
+      border-radius: 10px;
+      padding: 30px 50px 30px 20px;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      margin-left: 35px;
+      h5 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 26px;
+        color: var.$descColor;
+      }
+      p {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: var.$descColor;
+        opacity: 0.7;
+      }
+      .customer__card--result {
+        @include mix.df(start, center, row);
+        gap: 21px;
+        div {
+          @include mix.df(center, center, row);
+          gap: 6px;
+          @media (max-width:350px) {
+          @include mix.df(center, center, column);
+          }
+        }
+        img {
+          width: 16px;
+        }
+        p {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          color: var.$descColor;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.updates__container {
+  .updates__container__head {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    h4 {
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 130%;
+      letter-spacing: 0.04em;
+      color: var.$blackColor;
+    }
+    h2 {
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 130%;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      color: var.$primaryColor;
+    }
+  }
+  .updates__container__footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-items: center;
+
+    .updates__container__footer--card {
+      margin-bottom: 50px;
+      max-width: 410px;
+      background: #ffffff;
+      border: 1px solid var.$borderColorTwo;
+      border-radius: 14px;
+      h5 {
+        padding-left: 20px;
+        padding-top: 20px;
+        max-width: 322px;
+        font-family: "Cera Round Pro";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        text-transform: capitalize;
+        font-feature-settings: "tnum" on, "lnum" on;
+        color: var.$blackColor;
+      }
+      p {
+        padding-left: 20px;
+        max-width: 361px;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      div {
+        padding-left: 20px;
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        a {
+          font-family: "Cera Round Pro";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 16px;
+          letter-spacing: 0.04em;
+          color: var.$primaryColor;
+        }
+      }
+    }
+    button {
+      grid-column-start: 2;
+      @include mix.btn;
+      width: 149px;
+      border: 1px solid var.$primaryColor;
+      border-radius: 100px;
+      margin-bottom: 120px;
+      a {
+        font-family: "Cera Round Pro";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.04em;
+        color: var.$blackColor;
+      }
+      &:hover {
+        a {
+          color: #ffffff !important;
+        }
+      }
+    }
+    @media (max-width: 1300px) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-evenly;
+      justify-items: center;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      @include mix.df(center, center, column);
+    }
+    @media (max-width: 500px) {
+      .updates__container__footer--card {
+        width: 80%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+#modal-video {
+  background-image: url(../../images/home/home-img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 763px;
+  margin-bottom: 120px;
+  .modal__conatiner {
+    position: relative;
+    .modal-custom {
+      width: 600px;
+    }
+    .modal-button-custom {
+      position: absolute;
+      top: 322px;
+      left:47.5%;
+      padding: 47px 44px 44px 52px;
+      border-radius: 500px;
+      background-color: transparent;
+      border: 1px solid var.$primaryColor;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

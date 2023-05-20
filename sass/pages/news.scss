@@ -1,0 +1,122 @@
+@use "../global";
+@use "../components/component-dishes";
+@use "../components/component-gallery";
+@use "../utils/variables" as var;
+@use "../utils/mixin" as mix;
+
+.updates__container {
+  .updates__container__head {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    h4 {
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 130%;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      color: var.$blackColor;
+    }
+    h2 {
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 130%;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      color: var.$primaryColor;
+    }
+  }
+  .updates__container__footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-items: center;
+
+    .updates__container__footer--card {
+      margin-bottom: 50px;
+      max-width: 410px;
+      background: #ffffff;
+      border: 1px solid var.$borderColorTwo;
+      border-radius: 14px;
+      h5 {
+        padding-left: 20px;
+        padding-top: 20px;
+        max-width: 322px;
+        font-family: "Cera Round Pro";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        text-transform: capitalize;
+        font-feature-settings: "tnum" on, "lnum" on;
+        color: var.$blackColor;
+      }
+      p {
+        padding-left: 20px;
+        max-width: 361px;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      div {
+        padding-left: 20px;
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        a {
+          font-family: "Cera Round Pro";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 16px;
+          letter-spacing: 0.04em;
+          color: var.$primaryColor;
+        }
+      }
+    }
+    button {
+      grid-column-start: 2;
+      @include mix.btn;
+      width: 149px;
+      border: 1px solid var.$primaryColor;
+      border-radius: 100px;
+      margin-bottom: 120px;
+      a {
+        font-family: "Cera Round Pro";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.04em;
+        color: var.$blackColor;
+      }
+      &:hover {
+        a {
+          color: #ffffff !important;
+        }
+      }
+    }
+    @media (max-width: 1300px) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-evenly;
+      justify-items: center;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      @include mix.df(center, center, column);
+    }
+    @media (max-width: 500px) {
+      .updates__container__footer--card {
+        width: 80%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

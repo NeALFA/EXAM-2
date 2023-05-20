@@ -1,0 +1,131 @@
+@use "../global";
+@use "../utils/variables" as var;
+@use "../utils/mixin" as mix;
+
+.gallery__container {
+  margin-left: 310px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @include mix.df(start, center, row);
+  gap: 14px;
+  overflow: hidden;
+  .gallery__container__left {
+    min-width: 491px;
+    h4 {
+      padding-top: 91px;
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 130%;
+      letter-spacing: 0.04em;
+      text-transform: capitalize;
+      font-feature-settings: "tnum" on, "lnum" on;
+      color: var.$blackColor;
+    }
+    h2 {
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 130%;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      font-feature-settings: "tnum" on, "lnum" on;
+      color: var.$blackColor;
+      padding-bottom: 24px;
+    }
+    > p {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 175%;
+      letter-spacing: 0.04em;
+      color: #aaaaaa;
+      max-width: 491px;
+      padding-bottom: 8px;
+    }
+    button {
+      @include mix.btn;
+      width: 149px;
+      border: 1px solid var.$primaryColor;
+      border-radius: 100px;
+      margin-bottom: 120px;
+      a {
+        font-family: "Cera Round Pro";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.04em;
+        color: var.$blackColor;
+      }
+      &:hover {
+        a {
+          color: #ffffff !important;
+        }
+      }
+    }
+  }
+  .gallery__container__right {
+    min-width: 1555px;
+    padding-left: 64px;
+    .owl-carousel {
+      .gallery__container__right--card {
+        position: relative;
+        width: 301px;
+        overflow: hidden;
+        .card-content {
+          width: 300px;
+          position: absolute;
+          bottom: -402px;
+          height: 502px;
+          text-align: center;
+          transition: 0.9s;
+          img {
+            width: 43px;
+            margin-left: 130px;
+            margin-top: 250px;
+            transition: 0.5s;
+          }
+        }
+        &:hover .card-content {
+          bottom: 0;
+          border-radius: 14px;
+          background: linear-gradient(
+            207.55deg,
+            rgba(0, 0, 0, 0.75) 1.5%,
+            rgba(0, 0, 0, 0.64) 98.62%
+          );
+          border: 2px solid rgba(36, 36, 36, 0.2);
+        }
+      }
+    }
+  }
+  @media (max-width:1250px) {
+    margin-left: 40px;
+  }
+  @media (max-width:1000px) {
+    .gallery__container__right {
+      display: none;
+    }
+  }
+  @media (max-width:600px) {
+    .gallery__container__left {
+      h2 {
+        width: 300px;
+      }
+      p {
+        width: 350px;
+      }
+    }
+  }
+  @media (max-width:400px) {
+    .gallery__container__left {
+      p {
+        width: 250px;
+      }
+    }
+  }
+}

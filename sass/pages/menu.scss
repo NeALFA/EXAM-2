@@ -1,0 +1,95 @@
+@use "../global";
+@use "../components/component-dishes";
+@use "../components/component-gallery";
+@use "../utils/variables" as var;
+@use "../utils/mixin" as mix;
+
+.ap-tab__container {
+  padding-top: 120px;
+  width: 100%;
+  gap: 34px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 660px) {
+    grid-template-columns: repeat(1, 1fr);
+    align-content: center;
+  }
+  .ap-tab-list {
+    background-color: var.$primaryColor;
+    display: grid;
+    gap: 20px;
+    padding: 50px 40px;
+    @media (max-width: 350px) {
+      padding: 30px 20px;
+    }
+    h2 {
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 54px;
+      text-transform: capitalize;
+      font-feature-settings: "tnum" on, "lnum" on;
+      color: #ffffff;
+    }
+    .ap-tab-item {
+      margin-bottom: 20px;
+      a {
+        width: auto !important;
+        border-radius: 100px;
+        @include mix.btn;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        color: var.$whiteColor;
+      }
+      &:hover {
+        a {
+          background-color: #fff !important;
+          border-radius: 100px;
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 175%;
+          letter-spacing: 0.05em;
+          text-transform: capitalize;
+          color: var.$primaryColor;
+        }
+      }
+    }
+  }
+  .ap-tab-content.active-tab {
+    display: grid !important;
+    grid-row-gap: 30px;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 1450px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .component__dishes {
+    max-width: 400px !important;
+    height: 468px;
+    padding: 20px 64px 25px 64px;
+    @media (max-width: 750px) {
+      padding: 20px 24px 25px 24px;
+    }
+    @media (max-width: 350px) {
+      padding: 20px 24px 25px 24px;
+      img {
+      width: 220px;
+      }
+    }
+  }
+}
