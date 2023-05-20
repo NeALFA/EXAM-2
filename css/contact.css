@@ -225,6 +225,13 @@ button {
   margin: 0 auto;
 }
 
+.container-contact {
+  max-width: 1300px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
 .navbar {
   background-color: #bb2339 !important;
 }
@@ -373,4 +380,19 @@ button {
   #footer .footer__container .footer__container__logo > img:first-child {
     width: 250px;
   }
+}
+
+.map__container h2 {
+  text-align: center;
+  padding-top: 110px;
+  padding-bottom: 40px;
+  font-family: "Cera Round Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  font-feature-settings: "tnum" on, "lnum" on;
+  color: #000000;
 }
