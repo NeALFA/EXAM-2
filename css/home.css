@@ -48,7 +48,7 @@ button {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  z-index: 1000;
+  z-index: 199999000;
   opacity: 1;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -884,6 +884,7 @@ button {
   width: 55px;
 }
 .customer__container .customer__container__footer .customer__card {
+  text-align: left;
   max-width: 410px;
   background: #ffffff;
   border: 1px solid rgba(51, 51, 51, 0.1);

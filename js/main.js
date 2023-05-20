@@ -28,7 +28,7 @@ $('.owl-carousel1').owlCarousel({
     loop:true,
     margin:10,
     navText: ['<span><i class="bi bi-chevron-left"></i></span>', '<span><i class="bi bi-chevron-right"></i></span>'],
-    nav:false,
+    nav:true,
     autoplay:true,
     autoplayTimeout:1500,
     autoplayHoverPause:true,
