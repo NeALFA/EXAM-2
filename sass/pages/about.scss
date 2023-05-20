@@ -1,0 +1,40 @@
+@use "../global";
+@use "../utils/variables" as var;
+@use "../utils/mixin" as mix;
+
+.about__container {
+  .about__container__title {
+    @include mix.df(center, center, column);
+    margin-top: 120px;
+    > img {
+      transform: rotate(180deg);
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-family: "Cera Round Pro";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 64px;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      font-feature-settings: "tnum" on, "lnum" on;
+      color: var.$blackColor;
+    }
+  }
+  .about__conatiner__footer {
+    > img {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: 0.04em;
+      color: #242424;
+    }
+  }
+}
