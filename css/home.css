@@ -411,11 +411,14 @@ button {
   border-radius: 6px;
   padding: 10px 15px;
 }
+#dishes .owl-carousel .owl-nav span i {
+  font-size: 20px;
+}
 #dishes .owl-carousel .owl-nav span:hover {
   border: 1px solid #BB2339;
 }
 #dishes .owl-carousel .owl-nav span:hover i {
-  width: 55px;
+  width: 15px;
 }
 @media (max-width: 500px) {
   #dishes .owl-carousel .owl-nav {

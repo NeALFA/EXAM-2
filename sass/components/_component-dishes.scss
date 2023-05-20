@@ -29,10 +29,13 @@
         border: 1px solid var.$borderColor;
         border-radius: 6px;
         padding: 10px 15px;
+        i {
+          font-size: 20px;
+        }
         &:hover {
           border: 1px solid var.$primaryColor;
           i {
-            width: 55px;
+            width: 15px;
           }
         }
       }
